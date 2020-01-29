@@ -7,7 +7,8 @@ import (
 
 	descriptor2 "github.com/golang/protobuf/descriptor"
 	"github.com/golang/protobuf/protoc-gen-go/descriptor"
-	"google.golang.org/genproto/protobuf/field_mask"
+	"github.com/gogo/protobuf/types"
+
 )
 
 func translateName(name string, md *descriptor.DescriptorProto) (string, *descriptor.DescriptorProto) {
@@ -35,8 +36,8 @@ func translateName(name string, md *descriptor.DescriptorProto) (string, *descri
 }
 
 // FieldMaskFromRequestBody creates a FieldMask printing all complete paths from the JSON body.
-func FieldMaskFromRequestBody(r io.Reader, md *descriptor.DescriptorProto) (*field_mask.FieldMask, error) {
-	fm := &field_mask.FieldMask{}
+func FieldMaskFromRequestBody(r io.Reader, md *descriptor.DescriptorProto) (*types.FieldMask, error) {
+	fm := &types.FieldMask{}
 	var root interface{}
 	if err := json.NewDecoder(r).Decode(&root); err != nil {
 		if err == io.EOF {
