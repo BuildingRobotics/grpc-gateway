@@ -1,7 +1,7 @@
 version: "1"
 rules:
   - base: master
-    upstream: grpc-ecosystem:grpc-gateway
+    upstream: grpc-ecosystem:master
     mergeMethod: rebase
     mergeUnstable: false
     assignees:
