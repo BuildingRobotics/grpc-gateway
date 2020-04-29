@@ -1,0 +1,15 @@
+version: "1"
+rules:
+  - base: master
+    upstream: grpc-ecosystem:grpc-gateway
+    mergeMethod: rebase
+    mergeUnstable: false
+    assignees:
+      - alin23
+      - jingo64
+    reviewers:
+      - alin23
+      - jingo64
+    conflictReviewers:
+      - alin23
+      - jingo64
