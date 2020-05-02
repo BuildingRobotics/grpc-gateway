@@ -4,12 +4,6 @@ rules:
     upstream: grpc-ecosystem:master
     mergeMethod: rebase
     mergeUnstable: false
-    assignees:
-      - alin23
-      - jingo64
-    reviewers:
-      - alin23
-      - jingo64
     conflictReviewers:
       - alin23
       - jingo64
